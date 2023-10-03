@@ -14,8 +14,7 @@ void draw(){
   fill(rojo, verde, azul);
   translate(200, 200);
   rotate(angulo);
-  rect(50, 50, 100 , 100);
-  angulo += 0.01;
+  rect(-50, -50, 100 , 100);
   
   if (intensidad == 255){
     aumentar = false;
@@ -27,5 +26,12 @@ void draw(){
       intensidad += 1;
   }else {
     intensidad -= 1;
+  }
+}
+
+void keyPressed()   {
+  
+  if (key == '1'){
+      angulo += 0.01;
   }
 }
